@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Font rules: Khmer -> Kantumruy Pro, everything else -> Arial */
+.khmer {
+  font-family: 'Kantumruy Pro', sans-serif;
+  line-height: 1.65;
+}
+
+.english {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #e8f7f4;
+  color: #263238;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Mixed text: Kantumruy Pro first so Khmer glyphs use it, Arial for Latin */
+.mixed {
+  font-family: 'Kantumruy Pro', Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+/* Khmer UI language: apply Khmer font to whole app, Latin glyphs fall back naturally */
+.lang-km {
+  font-family: 'Kantumruy Pro', Arial, Helvetica, sans-serif;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #ffffff 25%, #d8f0eb 50%, #ffffff 75%);
+  background-size: 800px 100%;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
